@@ -1,9 +1,8 @@
-import React, { useRef, useState } from "react";
-import { Link } from "@remix-run/react";
+import { useRef, useState } from "react";
 import { MetaFunction } from "@remix-run/node";
-import turnosAPI from "~/api/turnosAPI";
-import Cargador from "~/components/Cargador";
-import TurnoCard from "~/components/TurnoCard";
+import turnosAPI from "../api/turnosAPI";
+import Cargador from "../components/Cargador";
+import TurnoCard from "../components/TurnoCard";
 
 export const meta: MetaFunction = () => {
   return [
@@ -114,7 +113,7 @@ export default function Index() {
           Continuar
         </button>
 
-        {cargar && <Cargador />}
+        {cargar && <Cargador mensaje={'Buscando turnos'} />}
         {info.length !== 0 && (
           <section>
             <h2 className="text-2xl font-semibold mb-2 p-2">Tus turnos</h2>

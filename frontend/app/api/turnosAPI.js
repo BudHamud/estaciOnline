@@ -3,7 +3,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: `${import.meta.env.VITE_APP_LOCAL}/turnos`,
+  baseURL: `${import.meta.env.VITE_APP_URL}/turnos`,
 });
 
 const getTurnos = async (tel) => {
